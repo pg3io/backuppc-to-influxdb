@@ -5,7 +5,7 @@ BackupPC push to Influxdb
 [![pg3.io](https://img.shields.io/badge/made%20by-PG3-orange.svg)](https://twitter.com/pg3io/)
 [![Apache 2.0 Licence](https://img.shields.io/hexpm/l/plug.svg)](LICENCE)
 
-Script d'état backup de prés et post sauvegarde BackupPC.
+Script d'écriture dans Influxdb des états de *prés/post* job BackupPC.
 
 # Dépendences
 * Installation ``requirements.txt``
