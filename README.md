@@ -5,17 +5,17 @@ BackupPC push to Influxdb
 [![pg3.io](https://img.shields.io/badge/made%20by-PG3-orange.svg)](https://twitter.com/pg3io/)
 [![Apache 2.0 Licence](https://img.shields.io/hexpm/l/plug.svg)](LICENCE)
 
-Script d'écriture dans Influxdb des états de *prés/post* job BackupPC.
+Script status backuppc jobs to influxdb.
 
-# Dépendences
-* Installation ``requirements.txt``
+# Dependences
+* Install ``requirements.txt``
 ```
 pip3 install -r requirements.txt
 ```
 
-# Paramétrages
-* Placer les fichiers ``notify.py`` et ``config.py`` dans ``/usr/local/share/``
-* Définir la chaine de connexion à influxdb
+# Settings script
+* Move files ``notify.py`` and ``config.py`` in ``/usr/local/share/``
+* write influxdb access
 ```
 INFLUXDB_USER="influxdb username"
 INFLUXDB_PASSWORD="influxdb password"
@@ -24,16 +24,16 @@ INFLUXDB_PORT="influxdb port"
 DATABASE_NAME="database name"
 ```
 
-# Déclaration paramétrages
-Ajouter dans la consôle BackuppPC ***Edit config > Backup Settings***
+# Settings BackupPC
+Add in BackupPC ***Edit config > Backup Settings***
 
-Ajouter dans ``DumpPreUserCmd`` et ``DumpPostUserCmd``
+In ``DumpPreUserCmd`` and ``DumpPostUserCmd``
 ```
 /usr/local/share/notify.py --xferok $xferOK --host $host --type $type --client $client --hostip $hostIP --share $share --xfermethod $XferMethod --sshpath $sshPath --cmdtype $cmdType
 ```
 
 # License
-Ce projet est sous licence [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) consulter le fichier [LICENSE](LICENSE) pour plus de détails.
+Licence projet [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) for details [LICENSE](LICENSE).
 
 # Informations sur l'auteur
-Ce projet a été créé par [PG3](https://pg3.io) en janvier 2021.
+This project was created by [PG3](https://pg3.io) in January 2021.
