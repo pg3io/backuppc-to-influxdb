@@ -32,3 +32,8 @@ Ajouter dans ``DumpPreUserCmd`` et ``DumpPostUserCmd``
 /usr/local/share/notify.py --xferok $xferOK --host $host --type $type --client $client --hostip $hostIP --share $share --xfermethod $XferMethod --sshpath $sshPath --cmdtype $cmdType
 ```
 
+# License
+Ce projet est sous licence [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) consulter le fichier [LICENSE](LICENSE) pour plus de détails.
+
+# Informations sur l'auteur
+Ce projet a été créé par [PG3](https://pg3.io) en janvier 2021.
