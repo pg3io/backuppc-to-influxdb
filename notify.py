@@ -111,6 +111,8 @@ def main():
     parser.add_argument('--host', help='Host', required=True)
     parser.add_argument('--type', help='Type', required=True)
     parser.add_argument('--client', help='Client', required=True)
+    parser.add_argument('--user', help='User', required=True)
+    parser.add_argument('--moreusers', help='moreUsers', required=False)
     parser.add_argument('--hostip', help='Host IP', required=True)
     parser.add_argument('--share', help='Share', required=True)
     parser.add_argument('--xfermethod', help='xferMethod', required=True)
@@ -120,7 +122,7 @@ def main():
     f = open("/etc/hostname", "r")
     hostname = f.read()
     hostname = hostname.rstrip('\n')
-    fields = dict(backupServer = hostname, xferOK = args['xferok'], Type = args['type'], client = args['client'], host = args['host'], hostIP = args['hostip'], share = args['share'], XferMethod = args['xfermethod'], sshPath = args['sshpath'], cmdType = args['cmdtype'])
+    fields = dict(backupServer = hostname, xferOK = args['xferok'], Type = args['type'], client = args['client'], user = args['user'], moreusers= args['morusers'], host = args['host'], hostIP = args['hostip'], share = args['share'], XferMethod = args['xfermethod'], sshPath = args['sshpath'], cmdType = args['cmdtype'])
     tags = dict(host = args['host'])
     return(insert_logs(DATABASE_NAME, INFLUXDB_USER, INFLUXDB_PASSWORD, INFLUXDB_HOSTNAME, INFLUXDB_PORT, fields, tags))
 

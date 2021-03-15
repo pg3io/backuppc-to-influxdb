@@ -29,7 +29,7 @@ Add in BackupPC ***Edit config > Backup Settings***
 
 In ``DumpPreUserCmd`` and ``DumpPostUserCmd``
 ```
-/usr/local/share/notify.py --xferok $xferOK --host $host --type $type --client $client --hostip $hostIP --share $share --xfermethod $XferMethod --sshpath $sshPath --cmdtype $cmdType
+/usr/local/share/notify.py --xferok $xferOK --host $host --type $type --client $client --user $user --moreusers $moreUsers --hostip $hostIP --share $share --xfermethod $XferMethod --sshpath $sshPath --cmdtype $cmdType
 ```
 
 # License
