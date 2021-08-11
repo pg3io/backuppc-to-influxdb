@@ -122,7 +122,7 @@ def main():
     f = open("/etc/hostname", "r")
     hostname = f.read()
     hostname = hostname.rstrip('\n')
-    fields = dict(backupServer = hostname, xferOK = args['xferok'], Type = args['type'], client = args['client'], user = args['user'], moreusers= args['morusers'], host = args['host'], hostIP = args['hostip'], share = args['share'], XferMethod = args['xfermethod'], sshPath = args['sshpath'], cmdType = args['cmdtype'])
+    fields = dict(backupServer = hostname, xferOK = int(args['xferok']), Type = args['type'], client = args['client'], user = args['user'], moreusers= args['morusers'], host = args['host'], hostIP = args['hostip'], share = args['share'], XferMethod = args['xfermethod'], sshPath = args['sshpath'], cmdType = args['cmdtype'])
     tags = dict(host = args['host'])
     return(insert_logs(DATABASE_NAME, INFLUXDB_USER, INFLUXDB_PASSWORD, INFLUXDB_HOSTNAME, INFLUXDB_PORT, fields, tags))
 
